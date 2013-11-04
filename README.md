@@ -1,4 +1,4 @@
-soup
+SOUP
 ====
 STARRS Online Utilization Package
 
