@@ -1,0 +1,150 @@
+.soup-table-container {
+    background-color: black;
+    padding: .25em;
+    float: left;
+}
+
+.soup-table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.soup-table td {
+    background-color: green;
+    border: 1px solid black;
+    padding: 3px;
+}
+
+.soup-outer-container {
+    width: 904px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newsoup-table {
+    width: 100%;
+}
+
+.soup-block {
+    padding: 3px;
+    background-color: green;
+    float: left;
+    border: 1px solid black
+}
+
+.soup-block2 {
+    padding-left: 3px;
+    padding-right: 3px;
+    background-color: green;
+    border: 1px solid black
+}
+
+.soup-table2 {
+    float: left;
+    height: calc(100% - 1.5em);
+}
+
+body {
+    background-color: black;
+}
+
+.soup-host-none {
+    background-color: #151515;
+}
+.soup-host-arp {
+    background-color: #0B3B0B;
+}
+.soup-host-ping {
+    background-color: #00FF00;
+}
+.soup-host-unknown {
+    background-color: #FF0000;
+}
+.soup-host-nonexistant {
+    background-color: black;
+}
+.soup-host-special {
+    background-color: #0101DF;
+}
+.soup-host-warning {
+    background-color: #FFFF00;
+}
+.soup-host-dead {
+    background-color: #424242;
+}
+
+
+.soup-label {
+    color: white;
+    font-size: xx-small;
+    height: 1.5em;
+    text-align: center;
+}
+
+.soup-label a {
+    color: white;
+}
+
+.soup-network {
+    height: 95%;
+    float: left;
+    padding-right:2px;
+}
+
+.soup-highlight {
+    transform: scale(2,4);
+    -webkit-transform: scale(2,4);
+    background-color: white;
+}
+
+.tooltip-inner {
+    white-space:pre-wrap;
+    text-align: left;
+    max-width:none;
+}
+
+.soup-key {
+    clear: left;
+    height: 23px;
+    border: 1px solid white;
+    font-size: x-small;
+    width: 1272px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.soup-key ul li {
+    display: inline;
+}
+
+.soup-key ul {
+    list-style-type: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.soup-key .soup-label {
+    text-align: left;
+    font-size: small;
+}
+
+.soup-key .soup-block2 {
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+.soup-zone {
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.soup-loading {
+    z-index: 1;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}

@@ -1,0 +1,80 @@
+$(document).ready(function() {
+
+    sum = 0; 
+    $('.soup-zone .soup-network').each(function(i,o) { 
+        sum += $(o).width() + 2; 
+    }); 
+    $('.soup-zone').width(sum);
+    $('.soup-loading').toggle();
+    //refresh();
+    $.ajaxSetup({async:false});
+});
+
+function setcell(obj) {
+    tdclass = "soup-host-none";
+    // Host is ARPable
+    if (obj.arp == 1) { tdclass = "soup-host-arp"; }
+    // Host is Pingable
+    if (obj.ping == 1) { tdclass = "soup-host-ping"; }
+    // Host is not registered but is either ARPable or Pingable
+    if (obj.reg == 0 && (obj.arp == 1||obj.ping == 1)) { tdclass = "soup-host-unknown"; }
+    // Host is in a reserved range but not registered
+    if (obj.warn == 1 && (obj.arp == 1||obj.ping == 1)) { tdclass = "soup-host-warning"; }
+    // Host is registered but is neither ARPable or Pingable
+    if (obj.reg ==  1 && obj.arp == 0 && obj.ping == 0) { tdclass = "soup-host-dead"; }
+
+    box = $(document.getElementById(obj.address))
+    if (!box.hasClass(tdclass)) {
+        box.attr('class','soup-block2');
+        box.addClass(tdclass)
+    }
+
+    arptext = "No";
+    if (obj.arp == 1) { arptext = "Yes"; }
+    pingtext = "No";
+    if (obj.ping == 1) { pingtext = "Yes"; }
+    regtext = "No";
+    if (obj.reg == 1) { regtext = "Yes"; }
+
+    titletext = "Address: "+obj.address+"\nSubnet: "+obj.subnet+"\nIP Range: "+obj.range+"\nARP: "+arptext+"\nPing: "+pingtext+"\nRegistered: "+regtext
+
+    box.attr('title',titletext);
+    box.tooltip({placement:"right"});
+    box.tooltip('fixTitle');
+
+    if (tdclass != "soup-host-none") {
+        box.click(function() {
+            $.get("/starrs/"+obj.address, function(returl) {
+                window.open(returl, '_blank');
+            });
+        });
+    }
+}
+
+//function refresh() {
+//    $('.soup-block2').each(function() {
+//        ip = $(this).attr('id');
+//        $.get("/status/"+ip, function(statobject) {
+//            setcell(statobject);
+//        });
+//    });
+//}
+
+function refresh() {
+    $.getJSON("/status2", function(data) {
+        $.each(data, function(k, v) {
+            setcell(v);
+        });
+    });
+}
+
+function toggleHidden() {
+    $('.soup-loading').toggle();
+    console.log('Toggling');
+}
+
+function reload() {
+    toggleHidden();
+    refresh();
+    toggleHidden();
+}

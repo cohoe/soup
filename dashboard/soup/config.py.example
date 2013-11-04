@@ -1,0 +1,13 @@
+APP_DEBUG = False 
+
+APP_NAME = "Soup Dashboard"
+
+DB_USER = "starrs_admin"
+DB_PASS = ""
+DB_HOST = "db.example.com"
+DB_PORT = "5432"
+DB_NAME = "starrs"
+
+WEB_HOST = "starrs.example.com"
+
+DISPLAY_HOSTS_PER_COL = 96

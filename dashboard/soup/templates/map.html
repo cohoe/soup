@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="soup-loading">Loading...</div>
+<div class="soup-zone">
+{% for subnet in subnets %}
+    {% include 'subnet.html' %}
+{% endfor %}
+</div>
+{% include 'key.html' %}
+{% endblock %}

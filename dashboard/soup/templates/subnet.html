@@ -1,0 +1,11 @@
+<div class="soup-network">
+<div class="soup-label"><a target="_blank" href="https://{{conf.WEB_HOST}}/ip/subnet/view/{{subnet.get_subnet_url()}}">{{subnet.get_vlan()}}</a></div>
+{% set ips = subnet.get_ips() %}
+{% for n in range(0,subnet.get_display_columns()) %}
+<table class="soup-table2">
+{% for i in range(0,conf.DISPLAY_HOSTS_PER_COL) %}
+    <tr><td id={{ips[(i+(conf.DISPLAY_HOSTS_PER_COL*n))]}} class="soup-block2 soup-host-none"></td></tr>
+{% endfor %}
+</table>
+{% endfor %}
+</div>

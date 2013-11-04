@@ -1,0 +1,6 @@
+[submodule "third-party/python-iptools"]
+	path = third-party/python-iptools
+	url = https://github.com/bd808/python-iptools.git
+[submodule "third-party/bootstrap"]
+	path = third-party/bootstrap
+	url = https://github.com/twbs/bootstrap
