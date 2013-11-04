@@ -50,8 +50,6 @@ def get_ping(ip):
     else:
         return False
 
-#ips = get_actual_ips('10.101.38.0/23')
-
 #print get_actual_ips(get_system_subnet())
 #print get_actual_ips(get_system_subnet())
 sys_iface = get_system_interface(get_system_subnet())
