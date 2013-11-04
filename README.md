@@ -1,9 +1,8 @@
 soup
 ====
+STARRS Online Utilization Package
 
-Network dashboard to combine with STARRS
-
-Visually identifies what hosts are active on a network and if they are registered in STARRS. 
+Network dashboard that visually identifies what hosts are active on a network and if they are registered in STARRS. 
 
 ![alt tag](https://raw.github.com/cohoe/soup/master/screenshot.png)
 
@@ -29,3 +28,7 @@ Requirements
     * sqlalchemy
 * Nodes
     * python-iptools
+
+Setup & Configuration
+---------------------
+I'll get to this
