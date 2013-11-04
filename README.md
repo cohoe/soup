@@ -32,3 +32,7 @@ Requirements
 Setup & Configuration
 ---------------------
 I'll get to this
+
+Name Origin
+-----------
+A good friend (Matt Campbell) wrote a similar tool for the RIT networks. His had more software features and had a kiosk display. Matt's nickname is "soup".
